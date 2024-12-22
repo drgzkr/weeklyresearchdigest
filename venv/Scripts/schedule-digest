@@ -1,6 +1,0 @@
-#!D:\weeklyresearchdigest\venv\Scripts\python.exe
-import sys
-from weeklyresearchdigest.scheduler import schedule_digest
-
-if __name__ == '__main__':
-    sys.exit(schedule_digest())
