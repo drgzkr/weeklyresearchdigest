@@ -4,7 +4,7 @@ import sys
 from dotenv import dotenv_values, set_key
 from weeklyresearchdigest.config import EMAIL_SENDER, EMAIL_PASSWORD, EMAIL_RECIPIENT, OPENAI_API_KEY, DEFAULT_QUERY
 from weeklyresearchdigest.digest_logic import run_weekly_digest
-
+import argparse
 
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), "config.env")
 

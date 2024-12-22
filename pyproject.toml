@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "weeklyresearchdigest"
-version = "0.1.2"
+version = "0.1.4"
 description = ""
 authors = ["drgzkr <drgzkr@gmail.com>"]
 readme = "README.md"
