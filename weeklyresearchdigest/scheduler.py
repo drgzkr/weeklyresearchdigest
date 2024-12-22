@@ -2,6 +2,8 @@ import os
 import platform
 import subprocess
 from pathlib import Path
+from weeklyresearchdigest.weekly_digest import check_and_populate_config
+from dotenv import set_key
 
 # Conditionally import crontab for Linux/macOS
 if platform.system() in ["Linux", "Darwin"]:
@@ -28,6 +30,11 @@ def schedule_digest():
     if not validate_time(time):
         print("Invalid time format. Please enter a valid 24-hour time in HH:MM format.")
         return
+
+    # Update the default query in config.env
+    if query:
+        set_key(CONFIG_FILE, "DEFAULT_QUERY", query)
+        print(f"Updated DEFAULT_QUERY in config.env to: {query}")
 
     # Check the current operating system
     system = platform.system()

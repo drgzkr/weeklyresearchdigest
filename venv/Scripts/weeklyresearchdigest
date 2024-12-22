@@ -1,0 +1,6 @@
+#!D:\weeklyresearchdigest\venv\Scripts\python.exe
+import sys
+from weeklyresearchdigest.weekly_digest import main
+
+if __name__ == '__main__':
+    sys.exit(main())

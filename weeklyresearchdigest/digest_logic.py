@@ -122,7 +122,7 @@ def generate_summary(papers):
     messages[-1]["content"] += "Provide an overarching narrative about how these papers relate to each other and to the broader literature:\n"
     try:
         client = OpenAI(
-            api_key=os.environ.get("OPENAI_API_KEY"),  # This is the default and can be omitted
+            api_key=openai.api_key,  # This is the default and can be omitted
         )
 
         response = client.chat.completions.create(
@@ -153,6 +153,7 @@ def send_email(subject, body, recipient):
         server.login(EMAIL_SENDER, EMAIL_PASSWORD)
 
         msg = MIMEMultipart("alternative")
+        msg["Query"] == DEFAULT_QUERY
         msg["Subject"] = subject
         msg["From"] = EMAIL_SENDER
         msg["To"] = recipient
