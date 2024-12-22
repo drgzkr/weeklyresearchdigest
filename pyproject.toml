@@ -2,7 +2,7 @@
 name = "weeklyresearchdigest"
 version = "0.1.2"
 description = ""
-authors = ["drgzkr"]
+authors = ["drgzkr <drgzkr@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
